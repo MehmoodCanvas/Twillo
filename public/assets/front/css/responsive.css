@@ -1,0 +1,158 @@
+@media only screen and (min-width: 1800px){
+    .container{
+        max-width: 1700px;
+    }
+}
+@media only screen and (max-width: 1600px){
+    .signin_wrap_video {
+        width: 1010px;
+    }
+    .signin_form_main_wrap {
+        width: calc(100% - 1010px);
+    }
+}
+@media only screen and (max-width: 1399px){
+    .dashboard_side_bar .nav-link {
+        font-size: 14px;
+    }
+    .dashboard_side_bar {
+        width: 240px;
+        padding: 120px 0px 30px 0px;
+    }
+    .dashboard_main_box {
+        padding: 20px;
+        margin: 130px 30px 30px 270px;
+        width: calc(100% - 290px);
+    }
+    .d_content_main_heading h6 {
+        font-size: 30px;
+    }
+    .d_content_main_heading {
+        margin: 0px 0px 20px 0px;
+    }
+    .d_content_top_crbox_f {
+        padding: 15px 20px;
+        gap: 10px;
+    }
+    .d_content_top_crbox_img img {
+        max-width: 50px;
+    }
+    .d_content_top_crbox_text h6 {
+        font-size: 18px;
+    }
+    .d_content_top_crbox_text p {
+        font-size: 12px;
+    }
+    .d_content_main_box_heading h6 {
+        font-size: 18px;
+    }
+    .d_content_main_box {
+        padding: 15px 15px;
+    }
+    .d_content_main_box_chart img {
+        max-width: 100%;
+    }
+    .lg_box_height {
+        min-height: 100%;
+    }
+    .d_content_main_box_table_m table tbody tr td, .d_content_main_box_table_m table tbody tr th {
+        font-size: 14px;
+        padding: 15px 10px !important;
+    }
+    .d_content_main_box_table_m .dt-container .dt-paging .dt-paging-button {
+        font-size: 20px;
+    }
+    .d_content_main_box_table_m .dt-info {
+        font-size: 14px;
+    }
+    .common_dark_btn {
+        width: 175px;
+        font-size: 14px;
+    }
+    .d_content_main_form_inputs input {
+        height: 65px;
+        font-size: 14px;
+    }
+    .d_content_main_form_inputs label {
+        font-size: 17px;
+    }
+    .header_main_wrap_logo img {
+        max-width: 230px;
+    }
+    .header_main_wrap_f {
+        padding: 0px 20px;
+    }
+    .d-logout-Drop {
+        left: 70px;
+    }
+    .signin_form_main_wrap {
+        gap: 20px;
+        width: calc(100% - 900px);
+    }
+    .signin_wrap_video {
+        width: 900px;
+    }
+    .signin_form_logo img {
+        max-width: 220px;
+    }
+    .signin_form_ttext h6 {
+        font-size: 35px;
+    }
+    .signin_form_ttext p {
+        font-size: 16px;
+    }
+    .signup_wrap {
+        width: 850px;
+    }
+    .signup_wrap1 {
+        width: calc(100% - 850px);
+        padding: 0px 10px;
+    }
+    .signup_wrap1 input {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .signin_form_logo img {
+        max-width: 200px;
+    }
+    .signin_wrap_video {
+        width: 660px;
+        height: 100vh;
+    }
+    .signin_form_main_wrap {
+        gap: 30px;
+        width: calc(100% - 660px);
+        padding: 0px 20px;
+    }
+    .signin_form_ttext h6 {
+        font-size: 30px;
+    }
+    .signin_form_ttext p {
+        font-size: 14px;
+    }
+    .form_field label {
+        font-size: 17px;
+        margin: 0px 0px 0px 10px;
+    }
+    .form_field input {
+        font-size: 14px;
+    }
+    .signin_checkbox_f a {
+        font-size: 14px;
+    }
+    .material-checkbox {
+        font-size: 14px;
+    }
+    .signin_form_btn a {
+        font-size: 15px;
+    }
+    .main_btn {
+        font-size: 14px;
+        width: 155px;
+    }
+}
+@media only screen and (max-width: 991px){
+}
+@media only screen and (max-width: 575px){
+}
