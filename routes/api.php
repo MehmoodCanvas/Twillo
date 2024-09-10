@@ -7,4 +7,4 @@ use App\Http\Controllers\Sms;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-Route::post('/sms-response', [Sms::class, 'response']);
+Route::post('/sms-response', [Sms::class, 'response'])->middleware('auth:sanctum');
