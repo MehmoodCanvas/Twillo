@@ -49,6 +49,7 @@ class Sms extends Controller
 
     public function response(Request $request)
     {
+        $token = $request->session()->token();
         $from = $request->input('From');
         $body = strtolower(trim($request->input('Body')));
 
@@ -60,7 +61,7 @@ class Sms extends Controller
             }
         }
 
-        $response = new Twiml();
+        $response = new MessagingResponse();
         $response->message('Thank you for your response.');
 
         return response($response)->header('Content-Type', 'text/xml');
