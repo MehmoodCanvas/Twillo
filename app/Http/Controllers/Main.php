@@ -16,7 +16,12 @@ class Main extends Controller
    }
 
    public function login(){
-    return view('signin');
+    if(Auth::check()){
+        return redirect('/dashboard');
+    }else{
+        return view('signin');
+
+    }
     }
 
     public function dashboard(){
