@@ -49,7 +49,6 @@ class Sms extends Controller
 
     public function response(Request $request)
     {
-        $token = $request->session()->token();
         $from = $request->input('From');
         $body = strtolower(trim($request->input('Body')));
 
@@ -74,17 +73,21 @@ class Sms extends Controller
         $group->sms_group_name=$request->sms_group_name;
         $group->save();
         return redirect()->back()->with('success','Group Created');
+
+
     }
 
 
 
 
     public function add_phone(Request $request){
+        
         $phone = new Phone_number();
         $phone->phone_group_id=$request->phone_group_id;
         $phone->phone_number=$request->phone_number;
         $phone->save();
         return redirect()->back()->with('success','Phone Number Added to the Group.');
+
     }
 
     public function bulk_number(Request $request){

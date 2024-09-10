@@ -50,7 +50,6 @@
                     <button class="nav-link" id="v-pills-Emails-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Emails" type="button" role="tab" aria-controls="v-pills-Emails" aria-selected="false"><img src="assets/front/images/d_ico4.png" class="img-fluid" alt="">All Emails</button>
                     <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false"><img src="assets/front/images/d_ico5.png" class="img-fluid" alt=""> Send Message</button>
                     <button class="nav-link" id="v-pills-sendemails-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sendemails" type="button" role="tab" aria-controls="v-pills-sendemails" aria-selected="false"><img src="assets/front/images/d_ico5.png" class="img-fluid" alt=""> Send Email</button>
-
                 </div>
             </div>
         </div>
@@ -220,7 +219,6 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($emailsgroups as  $emgroup)
-                                        
                                     <tr>
                                         <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{$emgroup->email_group_name}}</td>
