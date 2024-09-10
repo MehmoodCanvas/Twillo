@@ -14,6 +14,7 @@ Route::get('/dashboard', [Main::class, 'dashboard']);
 Route::Post('/post-login', [Account::class, 'post_login']);
 
 Route::Post('/send-sms', [Sms::class, 'index']);
+Route::post('/sms-response', [Sms::class, 'response']);
 Route::Post('/post-sms-group', [Sms::class, 'add_group']);
 Route::Post('/post-email-group', [Emails_control::class, 'add_email_group']);
 Route::Post('/post-email', [Emails_control::class, 'add_email']);
