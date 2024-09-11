@@ -23,7 +23,6 @@ Route::Post('/shoot-email', [Emails_control::class, 'sending_email']);
 Route::Post('/bulk-number', [Sms::class, 'bulk_number']);
 Route::Post('/bulk-email', [Emails_control::class, 'bulk_email']);
 
-
 Route::get('/logout', function () {
     Session::flush();
     return redirect('/admin-login');
