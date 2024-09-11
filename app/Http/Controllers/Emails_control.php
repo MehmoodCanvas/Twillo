@@ -12,12 +12,15 @@ use Rap2hpoutre\FastExcel\FastExcel;
 class Emails_control extends Controller
 {
     public function add_email_group(Request $request){
+
         $group = new Email_group();
         $group->email_group_name=$request->email_group_name;
         $group->save();
         return redirect()->back()->with('success','Email Group Created');
+        
     }
     public function add_email(Request $request){
+
         $phone = new Emails();
         $phone->emails_group_id=$request->emails_group_id;
         $phone->emails_email=$request->emails_email;
@@ -51,7 +54,6 @@ class Emails_control extends Controller
 
     }
 
-
     public function approved(){
         $emaildata= DB::table('emails')->where('emails_email',$_GET['email'])->first();
         $email = Emails::find($emaildata->emails_id);
@@ -68,6 +70,7 @@ class Emails_control extends Controller
         return view('emailresponse');
 
     }
+
     public function bulk_email(Request $request){
         $users = (new FastExcel)->import($request->import_email, function ($line) {
             Emails::create([
