@@ -47,27 +47,27 @@ class Sms extends Controller
     }
 
 
-public function response(Request $request)
-{
-    $response = new MessagingResponse();
-    $response->message('Thank you for your response.');
+    public function response(Request $request)
+    {
+        $response = new MessagingResponse();
+        $response->message('Thank you for your response.');
+        
+        response($response)->withHeaders(['Content-Type' => 'text/xml'])->send();
+        
+        flush(); 
     
-    response($response)->withHeaders(['Content-Type' => 'text/xml'])->send();
+        $from = $request->input('From');
+        $body = strtolower(trim($request->input('Body')));
     
-    flush(); 
-
-    $from = $request->input('From');
-    $body = strtolower(trim($request->input('Body')));
-
-    if ($body == 'interested') {
-        $user = Phone_number::where('phone_number', $from)->first();
-        if ($user) {
-            $user->phone_number_status = 'Interested'; 
-            $user->save();
+        if ($body == 'interested') {
+            $user = Phone_number::where('phone_number', $from)->first();
+            if ($user) {
+                $user->phone_number_status = 'Interested'; 
+                $user->save();
+            }
         }
+    
     }
-
-}
 
 
 
