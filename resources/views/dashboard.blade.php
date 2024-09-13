@@ -150,8 +150,10 @@
                             <table class="table" id="myTable1">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col">#</th>
                                         <th scope="col">Name</th>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -159,6 +161,8 @@
                                     <tr>
                                         <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{$item->sms_group_name}}</td>
+                                        <td>{{$item->sms_group_id}}</td>
+                                        <td><a class="btn btn-danger" href="{{url('delete/phone_group/'.$item->sms_group_id)}}">Delete</a></td>
                                     </tr>    
                                     @endforeach
                                     
@@ -186,6 +190,7 @@
                                         <th scope="col">Number</th>
                                         <th scope="col">Group</th>
                                         <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -195,6 +200,8 @@
                                         <td>{{$no->phone_number}}</td>
                                         <td>{{{$no->sms_group_name}}}</td>
                                         <td class="yellowp">{{{$no->phone_number_status}}}</td>
+                                        <td><a class="btn btn-danger" href="{{url('delete/phone/'.$no->phone_id)}}">Delete</a></td>
+
                                     </tr>     
                                     @endforeach
                                 </tbody>
@@ -212,8 +219,10 @@
                             <table class="table" id="myTable3">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col">#</th>
                                         <th scope="col">Name</th>
+                                        <th scope="col">Id</th>
+                                        <th scope="col">Action</th>
                                  
                                     </tr>
                                 </thead>
@@ -222,7 +231,8 @@
                                     <tr>
                                         <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{$emgroup->email_group_name}}</td>
-                 
+                                        <td>{{$emgroup->email_group_id}}</td>
+                                        <td><a class="btn btn-danger" href="{{url('delete/email_group/'.$emgroup->email_group_id)}}">Delete</a></td>
                                     </tr>
                                     @endforeach
 
@@ -251,6 +261,7 @@
                                         <th scope="col">Group</th>
 
                                         <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -260,6 +271,8 @@
                                         <td>{{$email->emails_email}}</td>
                                         <td>{{{$email->email_group_name}}}</td>
                                         <td class="yellowp">{{{$email->emails_status}}}</td>
+                                        <td><a class="btn btn-danger" href="{{url('delete/email/'.$email->emails_id)}}">Delete</a></td>
+
                                     </tr>     
                                     @endforeach
                                 </tbody>

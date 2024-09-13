@@ -92,11 +92,23 @@ public function response(Request $request)
     public function bulk_number(Request $request){
         $users = (new FastExcel)->import($request->import_file, function ($line) {
              Phone_number::create([
-                'phone_group_id'=>2,
+                'phone_group_id'=>$line['id'],
                 'phone_number' => '+'.$line['number'],
             ]);
         });
         return redirect()->back()->with('success','Phone Number Added to the Group.');
+    }
+
+    public function delete($id){
+        $res=Sms_group::where('sms_group_id',$id)->delete();
+        $email=DB::table('phone')->where('phone_group_id',$id)->delete();
+        return redirect()->back()->with('success','Phone Group Delete With all records.');
+
+    }
+
+    public function single_delete($id){
+        $res=Phone_number::where('phone_id',$id)->delete();
+        return redirect()->back()->with('success','Phone Number Deleted.');
     }
 
 }

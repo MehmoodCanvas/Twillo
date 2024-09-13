@@ -74,10 +74,21 @@ class Emails_control extends Controller
     public function bulk_email(Request $request){
         $users = (new FastExcel)->import($request->import_email, function ($line) {
             Emails::create([
-                'emails_group_id'=>1,
+                'emails_group_id'=>$line['id'],
                 'emails_email' => $line['email'],
             ]);
         });
         return redirect()->back()->with('success','Email Added to the Group.');
+    }
+
+    public function delete($id){
+        $res=Email_group::where('email_group_id',$id)->delete();
+        $email=DB::table('emails')->where('emails_group_id',$id)->delete();
+        return redirect()->back()->with('success','Email Group Delete With all records.');
+
+    }
+    public function single_delete($id){
+        $res=Emails::where('emails_id',$id)->delete();
+        return redirect()->back()->with('success','Email Deleted.');
     }
 }

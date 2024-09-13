@@ -22,6 +22,11 @@ Route::Post('/post-number', [Sms::class, 'add_phone']);
 Route::Post('/shoot-email', [Emails_control::class, 'sending_email']);
 Route::Post('/bulk-number', [Sms::class, 'bulk_number']);
 Route::Post('/bulk-email', [Emails_control::class, 'bulk_email']);
+Route::get('/delete/email_group/{id}', [Emails_control::class, 'delete']);
+Route::get('/delete/phone_group/{id}', [Sms::class, 'delete']);
+Route::get('/delete/phone/{id}', [Sms::class, 'single_delete']);
+Route::get('/delete/email/{id}', [Emails_control::class, 'single_delete']);
+
 
 Route::get('/logout', function () {
     Session::flush();
