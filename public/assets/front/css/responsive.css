@@ -114,6 +114,9 @@
     .signup_wrap1 input {
         font-size: 14px;
     }
+    .cus_dmenu li button 
+        font-size: 13px
+    }
 }
 @media only screen and (max-width: 1199px){
     .signin_form_logo img {
