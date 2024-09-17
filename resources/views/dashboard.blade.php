@@ -181,7 +181,7 @@
                                     Add New
                               </button>
                               <ul class="dropdown-menu cus_dmenu" aria-labelledby="dropdownMenuButton1">
-                                <li><button data-bs-toggle="modal" data-bs-target="#addphone">Upload Single Number</button></li>
+                                <li><button data-bs-toggle="modal" data-bs-target="#addphone">Upload A Number</button></li>
                                 <li><button data-bs-toggle="modal" data-bs-target="#addphone_bulk">Upload Bulk Number</button></li>
                               </ul>
                             </div>
@@ -260,7 +260,7 @@
                                     Add New
                               </button>
                               <ul class="dropdown-menu cus_dmenu" aria-labelledby="dropdownMenuButton1">
-                                <li><button data-bs-toggle="modal" data-bs-target="#addemail">Upload Single Email</button></li>
+                                <li><button data-bs-toggle="modal" data-bs-target="#addemail">Upload A Email</button></li>
                                 <li><button data-bs-toggle="modal" data-bs-target="#addemail_bulk">Upload Bulk Emails</button></li>
                               </ul>
                             </div>
