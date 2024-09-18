@@ -54,6 +54,8 @@ input::-webkit-inner-spin-button {
 :root {
     --white: #ffffff;
     --black: #000000;
+    --main-color: #cfaa45;
+    --text-color: #25313D;
     --Montserrat-Light: "Montserrat-Light";
     --Montserrat-Regular: "Montserrat-Regular";
     --Montserrat-Medium: "Montserrat-Medium";
