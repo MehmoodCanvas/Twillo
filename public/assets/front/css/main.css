@@ -137,6 +137,26 @@ body::-webkit-scrollbar-thumb {
     color: #25313D;
     border: 1px solid #25313D;
 }
+.common_light_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 55px;
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    font-family: var(--Montserrat-SemiBold);
+    font-size: 18px;
+    color: var(--white);
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+.common_light_btn:hover{
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
 /* Common-Css  */
 
 /* SIGNIN-PAGE-START */
