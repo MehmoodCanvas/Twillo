@@ -458,8 +458,8 @@
                                         <h6>Add New</h6>
                                     </div>
                                     <div class="d_content_main_form_inputs">
-                                        <label for="">First Name <span>*</span></label>
-                                        <input type="text" placeholder="Enter First Name" name="sms_group_name">
+                                        <label for="">Name <span>*</span></label>
+                                        <input type="text" placeholder="Enter Name" name="sms_group_name">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
