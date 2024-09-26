@@ -360,7 +360,7 @@
                                         <div class="d_content_main_form_inputs">
                                             <label for="email_group_id">Select Group <span>*</span></label>
                                             <select name="email_group_id" id="email_group_id" class="minimal" required>
-                                                <option value="00">Single Number</option>
+                                                <option value="">Select Group</option>
                                                 @foreach ($emailsgroups as $emails)
                                                 <option value="{{$emails->email_group_id}}">{{$emails->email_group_name}}</option>
                                                 @endforeach
@@ -764,7 +764,7 @@ document.addEventListener("DOMContentLoaded", () => {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'],
             datasets: [{
                 data: [20, 20, 40, 50, 40, 50, 20, 40, 20,],
-                fill: false, // Fill under the line
+                fill: false, 
                 borderColor: '#CFAA45',
                 tension: 0.5
             }]
