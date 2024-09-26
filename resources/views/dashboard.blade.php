@@ -25,14 +25,14 @@
             <div class="dashboard-main-th-userm-f">
                 <div class="dashboard-main-th-user-f">
                     <div class="dashboard-main-th-user-img">
-                        <img src="assets/front/images/d-user-icon.png" class="img-fluid" alt="">
+                        <img src="{{asset('assets/front/images/d-user-icon.png')}}" class="img-fluid" alt="">
                     </div>
                     <div class="dashboard-main-th-user-name">
                         <p>{{Auth::user()->name}} <i class="fa-solid fa-chevron-down"></i></p>
                         <span>Active</span>
-                    </div>
-                    <div class="d-logout-Drop">
-                        <a href="{{url('logout')}}"><img src="assets/front/images/logout-ico.png" class="img-fluid" alt="Logout">Logout</a>
+                        <div class="d-logout-Drop">
+                            <a href="{{url('logout')}}"><img src="{{asset('assets/front/images/logout-ico.png')}}" class="img-fluid" alt="Logout">Logout</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,13 +43,13 @@
         <div class="dashboard_side_bar">
             <div class="d-flex align-items-start">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button class="nav-link active" id="v-pills-Dashboard-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Dashboard" type="button" role="tab" aria-controls="v-pills-Dashboard" aria-selected="true"><img src="assets/front/images/d_ico1.png" class="img-fluid" alt=""> Dashboard</button>
-                    <button class="nav-link" id="v-pills-Management-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Management" type="button" role="tab" aria-controls="v-pills-Management" aria-selected="false"><img src="assets/front/images/d_ico2.png" class="img-fluid" alt=""> Phone Group</button>
-                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false"><img src="assets/front/images/d_ico3.png" class="img-fluid" alt=""> Phone Numbers</button>
-                    <button class="nav-link" id="v-pills-Email-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Email" type="button" role="tab" aria-controls="v-pills-Email" aria-selected="false"><img src="assets/front/images/d_ico4.png" class="img-fluid" alt="">Email Groups</button>
-                    <button class="nav-link" id="v-pills-Emails-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Emails" type="button" role="tab" aria-controls="v-pills-Emails" aria-selected="false"><img src="assets/front/images/d_ico4.png" class="img-fluid" alt="">All Emails</button>
-                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false"><img src="assets/front/images/d_ico5.png" class="img-fluid" alt=""> Send Message</button>
-                    <button class="nav-link" id="v-pills-sendemails-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sendemails" type="button" role="tab" aria-controls="v-pills-sendemails" aria-selected="false"><img src="assets/front/images/d_ico5.png" class="img-fluid" alt=""> Send Email</button>
+                    <button class="nav-link active" id="v-pills-Dashboard-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Dashboard" type="button" role="tab" aria-controls="v-pills-Dashboard" aria-selected="true">Dashboard</button>
+                    <button class="nav-link" id="v-pills-Management-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Management" type="button" role="tab" aria-controls="v-pills-Management" aria-selected="false">Phone Group</button>
+                    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Phone Numbers</button>
+                    <button class="nav-link" id="v-pills-Email-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Email" type="button" role="tab" aria-controls="v-pills-Email" aria-selected="false">Email Groups</button>
+                    <button class="nav-link" id="v-pills-Emails-tab" data-bs-toggle="pill" data-bs-target="#v-pills-Emails" type="button" role="tab" aria-controls="v-pills-Emails" aria-selected="false">All Emails</button>
+                    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Send Message</button>
+                    <button class="nav-link" id="v-pills-sendemails-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sendemails" type="button" role="tab" aria-controls="v-pills-sendemails" aria-selected="false">Send Email</button>
                 </div>
             </div>
         </div>
@@ -175,9 +175,18 @@
                     <div class="d_content_main_wrap">
                         <div class="d_content_main_heading">
                             <h6>Phone Numbers</h6>
-                            <button class="common_dark_btn" data-bs-toggle="modal" data-bs-target="#addphone" >Add New</button>
+<!--                             <button class="common_dark_btn" data-bs-toggle="modal" data-bs-target="#addphone" >Add New</button> -->
+                            <div class="dropdown">
+                              <button class="common_dark_btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Add New
+                              </button>
+                              <ul class="dropdown-menu cus_dmenu" aria-labelledby="dropdownMenuButton1">
+                                <li><button data-bs-toggle="modal" data-bs-target="#addphone">Upload A Number</button></li>
+                                <li><button data-bs-toggle="modal" data-bs-target="#addphone_bulk">Upload Bulk Number</button></li>
+                              </ul>
+                            </div>
                         </div>
-                        <select class="filterselect" id="filterDropdown">
+                        <select class="filterselect minimal" id="filterDropdown">
                             <option value="">Show All</option>
                             <option value="Interested">Interested</option>
                             <option value="Not-interested">Not-interested</option>
@@ -252,9 +261,18 @@
                     <div class="d_content_main_wrap">
                         <div class="d_content_main_heading">
                             <h6>Emails</h6>
-                            <button class="common_dark_btn" data-bs-toggle="modal" data-bs-target="#addemail">Add New Email</button>
+<!--                             <button class="common_dark_btn" data-bs-toggle="modal" data-bs-target="#addemail">Add New Email</button> -->
+                            <div class="dropdown">
+                              <button class="common_dark_btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Add New
+                              </button>
+                              <ul class="dropdown-menu cus_dmenu" aria-labelledby="dropdownMenuButton1">
+                                <li><button data-bs-toggle="modal" data-bs-target="#addemail">Upload A Email</button></li>
+                                <li><button data-bs-toggle="modal" data-bs-target="#addemail_bulk">Upload Bulk Emails</button></li>
+                              </ul>
+                            </div>
                         </div>
-                        <select class="filterselect" id="filterDropdown2">
+                        <select class="filterselect minimal" id="filterDropdown2">
                             <option value="">Show All</option>
                             <option value="Interested">Interested</option>
                             <option value="Not-interested">Not-interested</option>
@@ -299,7 +317,7 @@
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                         <div class="d_content_main_form_inputs">
                                             <label for="group">Select Group <span>*</span></label>
-                                            <select name="group" id="group" class="minimal1" required>
+                                            <select name="group" id="group" class="minimal" required>
                                                 <option value="00">Single Number</option>
                                                 @foreach ($smsgroups as $sendgroups)
                                                 <option value="{{$sendgroups->sms_group_id}}">{{$sendgroups->sms_group_name}}</option>
@@ -309,7 +327,7 @@
                                     </div>                
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                         <div class="d_content_main_form_inputs">
-                                            <label for="">Phone Number <span>*</span></label>
+                                            <label for="">Phone Number</label>
                                             <input  placeholder="Enter  +102222044"  name="sms_single"></input>
                                         </div>
                                     </div>
@@ -341,7 +359,7 @@
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                         <div class="d_content_main_form_inputs">
                                             <label for="email_group_id">Select Group <span>*</span></label>
-                                            <select name="email_group_id" id="email_group_id" class="minimal1" required>
+                                            <select name="email_group_id" id="email_group_id" class="minimal" required>
                                                 <option value="00">Single Number</option>
                                                 @foreach ($emailsgroups as $emails)
                                                 <option value="{{$emails->email_group_id}}">{{$emails->email_group_name}}</option>
@@ -463,7 +481,7 @@
             </div>
         </div>
     </div>
-    <div class="modal new_modal fade" id="addphone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="addphone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="custome-content modal-content">
                 <div class="custome-content-modal" data-bs-dismiss="modal" aria-label="Close">
@@ -472,8 +490,6 @@
                 <div class="modal-body custome-body">
                     <div class="d_content_main_form_wrap">
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                <div class="row">
                                     <form action="{{url('post-number')}}" method="post">
                                         @csrf
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -482,7 +498,7 @@
                                             </div>
                                             <div class="d_content_main_form_inputs">
                                                 <label for="phone_group_id">Select Group <span>*</span></label>
-                                            <select name="phone_group_id" id="phone_group_id" required>
+                                            <select class="minimal" name="phone_group_id" id="phone_group_id" required>
                                                 <option value="">Select Group</option>
                                                 @foreach ($smsgroups as $groups)
                                                 <option value="{{$groups->sms_group_id}}">{{$groups->sms_group_name}}</option>
@@ -515,9 +531,21 @@
                                         </div>
                                     </form>
                                 </div>
-                            </div>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 cus_border">
-                                <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="addphone_bulk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="custome-content modal-content">
+                <div class="custome-content-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="modal-body custome-body">
+                    <div class="d_content_main_form_wrap">
+                        <div class="row">
                                     <form action="{{url('bulk-number')}}" method="post" enctype="multipart/form-data"> 
                                         @csrf
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -538,8 +566,6 @@
                                         </div>
                                     </form>
                                 </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -577,7 +603,7 @@
             </div>
         </div>
     </div>
-    <div class="modal  new_modal fade" id="addemail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addemail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="custome-content modal-content">
                 <div class="custome-content-modal" data-bs-dismiss="modal" aria-label="Close">
@@ -586,9 +612,6 @@
                 <div class="modal-body custome-body">
                     <div class="d_content_main_form_wrap">
                         <div class="row">
-
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                            <div class="row">
                                 <form action="{{url('post-email')}}" method="post">
                                     @csrf
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -597,7 +620,7 @@
                                         </div>
                                         <div class="d_content_main_form_inputs">
                                             <label for="emails_group_id">Select Group <span>*</span></label>
-                                           <select name="emails_group_id" id="emails_group_id" required>
+                                           <select class="minimal" name="emails_group_id" id="emails_group_id" required>
                                             <option value="">Select Group</option>
                                             @foreach ($emailsgroups as $egroups)
                                             <option value="{{$egroups->email_group_id}}">{{$egroups->email_group_name}}</option>
@@ -619,9 +642,21 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 cus_border">
-                            <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="addemail_bulk" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="custome-content modal-content">
+                <div class="custome-content-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="modal-body custome-body">
+                    <div class="d_content_main_form_wrap">
+                        <div class="row">
                                 <form action="{{url('bulk-email')}}" method="post" enctype="multipart/form-data"> 
                                     @csrf
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -642,14 +677,12 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
-                    </div>
-                     
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 <script src="{{asset('assets/front/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('assets/front/js/jquery-3.6.3.min.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>

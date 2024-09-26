@@ -42,7 +42,7 @@
                 </div>
                 <div class="signin_form_btn">
                     <button class="main_btn" type="submit">Sign In</button>
-                    <a href="#!">Register</a>
+<!--                     <a href="#!">Register</a> -->
                 </div>
             </form>
 

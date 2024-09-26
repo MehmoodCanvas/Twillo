@@ -36,9 +36,9 @@ select {
     -moz-box-sizing: border-box;
 }
 select.minimal {
-    background-image: url(../images/selectArrow.png);
-    background-position: calc(100% - 15px) calc(1em + 15px);
-    background-repeat: no-repeat;
+    background-image: url(../images/selectArrow.png) !important;
+    background-position: calc(100% - 15px) calc(1em + 15px) !important;
+    background-repeat: no-repeat !important;
 }
 /* GLOBAL_CSS_CHANGES_END_HERE */
 
@@ -54,6 +54,8 @@ input::-webkit-inner-spin-button {
 :root {
     --white: #ffffff;
     --black: #000000;
+    --main-color: #cfaa45;
+    --text-color: #25313D;
     --Montserrat-Light: "Montserrat-Light";
     --Montserrat-Regular: "Montserrat-Regular";
     --Montserrat-Medium: "Montserrat-Medium";
@@ -135,6 +137,56 @@ body::-webkit-scrollbar-thumb {
     color: #25313D;
     border: 1px solid #25313D;
 }
+.common_light_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 55px;
+    border: none;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    font-family: var(--Montserrat-SemiBold);
+    font-size: 18px;
+    color: var(--white);
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+.common_light_btn:hover{
+    background-color: var(--white);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.main_heading {
+    font-size: 50px;
+    font-family: var(--Montserrat-SemiBold);
+    color: var(--text-color);
+    text-transform: capitalize;
+    line-height: 1;
+    margin: 0 0 20px 0;
+}
+.heading {
+    font-size: 50px;
+    font-family: var(--Montserrat-SemiBold);
+    color: var(--white);
+    text-transform: capitalize;
+    line-height: 1;
+    margin: 0 0 10px 0;
+}
+.desc {
+    font-size: 18px;
+    font-family: var(--Montserrat-Medium);
+    color: var(--black);
+    opacity: 0.8;
+    margin: 0 0 20px 0;
+}
+.desc2 {
+    font-size: 18px;
+    font-family: var(--Montserrat-Medium);
+    color: var(--white);
+    opacity: 0.8;
+    margin: 0 0 20px 0;
+}
 /* Common-Css  */
 
 /* SIGNIN-PAGE-START */
@@ -205,7 +257,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 16px;
     font-family: var(--Montserrat-Regular);
     color: var(--black);
-    text-transform: capitalize;
     width: 100%;
     height: 50px;
     background-color: #f3f4f6;
@@ -372,10 +423,15 @@ body::-webkit-scrollbar-thumb {
 	top: -6px;
 	right: -10px;
 }
+.dashboard-main-th-user-img {
+    max-width: 60px;
+}
 .dashboard-main-th-user-img img {
     border-radius: 50px;
     overflow: hidden;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .navDropNoti {
     background: var(--white);
@@ -613,8 +669,9 @@ body::-webkit-scrollbar-thumb {
 .d_content_main_box_table_m table.dataTable > thead > tr > th{
     border: 0px;
 }
-.d_content_main_box_table_m .table>:not(caption)>*>*{
+.d_content_main_box_table_m .table>:not(caption)>*>* {
     border: 0px;
+    text-align: start !important;
 }
 .d_content_main_box_table_m .dt-container.dt-empty-footer tbody > tr:last-child > *{
     border: 0px;
@@ -710,7 +767,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 70px;
     color: #111;
-    padding: 0px 20px;
+    padding: 10px 10px;
     font-family: var(--Montserrat-Regular);
     font-size: 16px;
 }
@@ -726,9 +783,6 @@ body::-webkit-scrollbar-thumb {
     padding: 0px 20px;
     font-family: var(--Montserrat-Regular);
     font-size: 16px;
-}
-.d_content_main_form_wrap{
-    width: 70%;
 }
 .d_content_main_form_inputs textarea {
     border-radius: 8px;
@@ -752,7 +806,7 @@ body::-webkit-scrollbar-thumb {
     width: 710px;
 }
 .d_content_main_form_wrap {
-    width: 90%;
+    width: 100%;
 }
 /*ADDITIONAL CSS*/
 
@@ -1373,4 +1427,28 @@ body::-webkit-scrollbar-thumb {
 }
 .new_modal .d_content_main_form_wrap {
     width: 100%;
+}
+.dropdown-menu {
+    width: 100%;
+    padding: 0px !important;
+}
+.cus_dmenu li button {
+    background: transparent;
+    border: 0;
+    font-family: var(--Montserrat-Medium);
+    font-size: 16px;
+    color: var(--black);
+    padding: 5px;
+}
+.cus_dmenu li:hover {
+    background-color: #CFAA45;
+}
+.cus_dmenu li:hover button {
+    color: var(--white);
+}
+.d-logout-Drop a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--black);
 }
