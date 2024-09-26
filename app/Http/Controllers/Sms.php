@@ -20,6 +20,12 @@ class Sms extends Controller
 
         $users = DB::table('phone')->where('phone_group_id',$request->group)->get();
         if($request->group==00 && !empty($request->sms_single)){
+            $phone = new Phone_number();
+            $phone->phone_group_id=$request->phone_group_id;
+            $phone->phone_number=$request->sms_single;
+            $phone->phone_first_name=$request->phone_first_name;
+            $phone->phone_last_name=$request->phone_last_name;
+            $phone->save();
             $message = $twilio->messages->create(
                 "$request->sms_single",
                 [

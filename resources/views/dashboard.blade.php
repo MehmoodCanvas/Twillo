@@ -162,7 +162,7 @@
                                         <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{$item->sms_group_name}}</td>
                                         <td>{{$item->sms_group_id}}</td>
-                                        <td><a class="btn btn-danger" href="{{url('delete/phone_group/'.$item->sms_group_id)}}">Delete</a></td>
+                                        <td><a class="btn btn-danger confirmation" href="{{url('delete/phone_group/'.$item->sms_group_id)}}">Delete</a></td>
                                     </tr>    
                                     @endforeach
                                     
@@ -216,7 +216,7 @@
                                         <td>{{$no->phone_number}}</td>
                                         <td>{{{$no->sms_group_name}}}</td>
                                         <td class="yellowp">{{{$no->phone_number_status}}}</td>
-                                        <td><a class="btn btn-danger" href="{{url('delete/phone/'.$no->phone_id)}}">Delete</a></td>
+                                        <td><a class="btn btn-danger confirmation" href="{{url('delete/phone/'.$no->phone_id)}}">Delete</a></td>
 
                                     </tr>     
                                     @endforeach
@@ -248,7 +248,7 @@
                                         <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{$emgroup->email_group_name}}</td>
                                         <td>{{$emgroup->email_group_id}}</td>
-                                        <td><a class="btn btn-danger" href="{{url('delete/email_group/'.$emgroup->email_group_id)}}">Delete</a></td>
+                                        <td><a class="btn btn-danger confirmation" href="{{url('delete/email_group/'.$emgroup->email_group_id)}}">Delete</a></td>
                                     </tr>
                                     @endforeach
 
@@ -296,7 +296,7 @@
                                         <td>{{$email->emails_email}}</td>
                                         <td>{{{$email->email_group_name}}}</td>
                                         <td class="yellowp">{{{$email->emails_status}}}</td>
-                                        <td><a class="btn btn-danger" href="{{url('delete/email/'.$email->emails_id)}}">Delete</a></td>
+                                        <td><a class="btn btn-danger confirmation" href="{{url('delete/email/'.$email->emails_id)}}">Delete</a></td>
 
                                     </tr>     
                                     @endforeach
@@ -512,21 +512,22 @@
                                                 <input type="text" placeholder="+10000000" name="phone_number">
                                             </div>
                                         </div>
+
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                             <div class="d_content_main_form_inputs">
-                                                <button class="common_dark_btn">Submit</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                            <div class="d_content_main_form_inputs">
-                                                <label for="">First Name<span>*</span></label>
+                                                <label for="">First Name</label>
                                                 <input type="text" placeholder="First Name" name="phone_first_name">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                             <div class="d_content_main_form_inputs">
-                                                <label for="">Last Name<span>*</span></label>
+                                                <label for="">Last Name</label>
                                                 <input type="text" placeholder="Last Name" name="phone_last_name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                            <div class="d_content_main_form_inputs">
+                                                <button class="common_dark_btn">Submit</button>
                                             </div>
                                         </div>
                                     </form>
@@ -634,7 +635,18 @@
                                             <input type="email" placeholder="demo@xyz.com" name="emails_email" required>
                                         </div>
                                     </div>
-
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <div class="d_content_main_form_inputs">
+                                            <label for="">Email First Name<span>*</span></label>
+                                            <input type="text" placeholder="Jhon" name="emails_first_name" >
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <div class="d_content_main_form_inputs">
+                                            <label for="">Email Last Name<span>*</span></label>
+                                            <input type="text" placeholder="Xyz" name="emails_last_name" >
+                                        </div>
+                                    </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <div class="d_content_main_form_inputs">
                                             <button class="common_dark_btn">Submit</button>
@@ -689,7 +701,11 @@
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
 <script src="{{asset('assets/front/js/swiper-bundle.min.js')}}"></script>
 <script src="{{asset("assets/front/js/custom.js")}}"></script>
-
+<script type="text/javascript">
+    $('.confirmation').on('click', function () {
+        return confirm('Are you sure?');
+    });
+</script>
 <script>
 
     let table = new DataTable('#myTable', {
