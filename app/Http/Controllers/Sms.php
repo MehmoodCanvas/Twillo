@@ -85,6 +85,8 @@ class Sms extends Controller
         $phone = new Phone_number();
         $phone->phone_group_id=$request->phone_group_id;
         $phone->phone_number=$request->phone_number;
+        $phone->phone_first_name=$request->phone_first_name;
+        $phone->phone_last_name=$request->phone_last_name;
         $phone->save();
         return redirect()->back()->with('success','Phone Number Added to the Group.');
     }

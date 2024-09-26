@@ -182,6 +182,13 @@
                             <option value="Interested">Interested</option>
                             <option value="Not-interested">Not-interested</option>
                         </select>
+                        <select class="filterselect" id="filterDropdownGroup">
+                            <option value="">Show All</option>
+                            @foreach ($smsgroups as $item)
+                            <option value="{{$item->sms_group_name}}">{{$item->sms_group_name}}</option>
+                            @endforeach
+
+                        </select>
                         <div class="d_content_main_box_table_m">
                             <table class="table" id="myTable2">
                                 <thead>
@@ -437,10 +444,10 @@
                                 @csrf
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     <div class="d_content_modal_text">
-                                        <h6>Add New</h6>
+                                        <h6>Add New Group</h6>
                                     </div>
                                     <div class="d_content_main_form_inputs">
-                                        <label for="">First Name <span>*</span></label>
+                                        <label for="">Enter Group Name <span>*</span></label>
                                         <input type="text" placeholder="Enter First Name" name="sms_group_name">
                                     </div>
                                 </div>
@@ -492,6 +499,18 @@
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                             <div class="d_content_main_form_inputs">
                                                 <button class="common_dark_btn">Submit</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                            <div class="d_content_main_form_inputs">
+                                                <label for="">First Name<span>*</span></label>
+                                                <input type="text" placeholder="First Name" name="phone_first_name">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                            <div class="d_content_main_form_inputs">
+                                                <label for="">Last Name<span>*</span></label>
+                                                <input type="text" placeholder="Last Name" name="phone_last_name">
                                             </div>
                                         </div>
                                     </form>
@@ -589,9 +608,10 @@
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <div class="d_content_main_form_inputs">
                                             <label for="">Email<span>*</span></label>
-                                            <input type="email" placeholder="demo@xyz.com" name="emails_email">
+                                            <input type="email" placeholder="demo@xyz.com" name="emails_email" required>
                                         </div>
                                     </div>
+
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <div class="d_content_main_form_inputs">
                                             <button class="common_dark_btn">Submit</button>
@@ -659,6 +679,11 @@
         let selectedValue = dropdown.value;
         
         table2.search(selectedValue).draw();
+    });
+    const dropdown3 = document.getElementById('filterDropdownGroup');
+    dropdown3.addEventListener('change', function() {
+        let selectedValuew = dropdown3.value;
+        table2.search(selectedValuew).draw();
     });
 
 </script>

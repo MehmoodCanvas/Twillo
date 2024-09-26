@@ -24,6 +24,7 @@ class Emails_control extends Controller
         $phone = new Emails();
         $phone->emails_group_id=$request->emails_group_id;
         $phone->emails_email=$request->emails_email;
+   
         $phone->save();
         return redirect()->back()->with('success','Email Added to the Group.');
     
@@ -64,7 +65,8 @@ class Emails_control extends Controller
     }  
 
     public function noapproval(){
-        $email = Emails::find($_GET['email']);
+        $emaildata= DB::table('emails')->where('emails_email',$_GET['email'])->first();
+        $email = Emails::find($emaildata->emails_id);
         $email->emails_status='Not-interested';
         $email->save();
         return view('emailresponse');
