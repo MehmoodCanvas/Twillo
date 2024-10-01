@@ -71,6 +71,12 @@ class Sms extends Controller
                 $user->phone_number_status = 'Interested'; 
                 $user->save();
             }
+        }else{
+            $user = Phone_number::where('phone_number', $from)->first();
+            if ($user) {
+                $user->phone_number_status = 'Not-Interested'; 
+                $user->save();
+            }
         }
     
     }
