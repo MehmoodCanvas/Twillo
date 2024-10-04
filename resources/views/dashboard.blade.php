@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="{{asset('assets/front/css/responsive.css')}}">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="{{ asset('vendor/bladewind/css/animate.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('vendor/bladewind/css/bladewind-ui.min.css') }}" rel="stylesheet" />
+
 </head>
 
 <body class="d_body">
@@ -390,8 +393,8 @@
                                     </div> 
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <div class="d_content_main_form_inputs">
-                                            <label for="">Body <span>*</span></label>
-                                            <textarea placeholder="Enter Enter Message"  name="body" required></textarea>
+                                            <x-bladewind::textarea rows="20" name="body" label="Body"    required="true" toolbar="true"></x-bladewind::textarea>
+                                            {{-- <textarea placeholder="Enter Enter Message"  name="body" required></textarea> --}}
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -710,6 +713,9 @@
 <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
 <script src="{{asset('assets/front/js/swiper-bundle.min.js')}}"></script>
 <script src="{{asset("assets/front/js/custom.js")}}"></script>
+<script src="{{ asset('vendor/bladewind/js/helpers.js') }}"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
+
 <script type="text/javascript">
     $('.confirmation').on('click', function () {
         return confirm('Are you sure?');

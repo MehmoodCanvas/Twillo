@@ -20,7 +20,7 @@
                     </tr>
                     <tr>
                         <td align="center" style="padding-bottom: 20px;">
-                            <p style="font-size: 14px; color: #000000; opacity: 0.8; margin: 0;">{{ $data['body'] }}</p>
+                            <p style="font-size: 14px; color: #000000; opacity: 0.8; margin: 0;">{!! $data['body'] !!}</p>
                         </td>
                     </tr>
                     <tr>
