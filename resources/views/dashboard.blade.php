@@ -204,6 +204,8 @@
                                     <tr>
                                         <th scope="col">ID</th>
                                         <th scope="col">Number</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
                                         <th scope="col">Group</th>
                                         <th scope="col">Status</th>
                                         <th scope="col">Action</th>
@@ -214,6 +216,8 @@
                                     <tr>
                                         <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{$no->phone_number}}</td>
+                                        <td>{{$no->phone_first_name}}</td>
+                                        <td>{{$no->phone_last_name}}</td>
                                         <td>{{{$no->sms_group_name}}}</td>
                                         <td class="yellowp">{{{$no->phone_number_status}}}</td>
                                         <td><a class="btn btn-danger confirmation" href="{{url('delete/phone/'.$no->phone_id)}}">Delete</a></td>
@@ -282,7 +286,10 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">ID</th>
-                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Email First Name</th>
+                                        <th scope="col">Email Last Name</th>
+
                                         <th scope="col">Group</th>
 
                                         <th scope="col">Status</th>
@@ -294,6 +301,8 @@
                                     <tr>
                                         <th scope="row">{{$loop->iteration}}</th>
                                         <td>{{$email->emails_email}}</td>
+                                        <td>{{$email->emails_first_name}}</td>
+                                        <td>{{$email->emails_last_name}}</td>
                                         <td>{{{$email->email_group_name}}}</td>
                                         <td class="yellowp">{{{$email->emails_status}}}</td>
                                         <td><a class="btn btn-danger confirmation" href="{{url('delete/email/'.$email->emails_id)}}">Delete</a></td>
