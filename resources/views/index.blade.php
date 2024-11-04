@@ -64,7 +64,7 @@
     </div>
 </section>
 
-<section class="index_second_wrapper">
+<!-- <section class="index_second_wrapper">
     <div class="container">
         <div class="index_second_wrap_ttext">
             <h6 class="heading">Our exclusive offer's</h6>
@@ -133,7 +133,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="index_third_wrapper">
     <div class="container">
@@ -142,9 +142,9 @@
                 <h6 class="main_heading">Our Gallery</h6>
                 <p class="desc">Focus On Your Target Not Your Opponent</p>
             </div>
-             <div class="index_third_wrap_top_btn">
+             <!-- <div class="index_third_wrap_top_btn">
                 <a href="#!" class="common_dark_btn">View ALL</a>
-             </div>   
+             </div>    -->
         </div>
         <div class="index_third_wrap_images">
             <div class="row px-0">

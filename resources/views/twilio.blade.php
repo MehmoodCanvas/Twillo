@@ -8,7 +8,7 @@
             </div>
             <div class="twili_wrap_box_text">
                 <h6></h6>
-                <p>A brife description of the campaign.</p>
+                <p>A brief description of the campaign.</p>
             </div>
             @if(session()->has('success'))
             <div class="alert alert-success" role="alert">
@@ -28,7 +28,7 @@
                 ><span>
                   <svg viewBox="0 0 12 10" height="10px" width="12px">
                     <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
-                ><span>I agree to receive marketing messaging from Twilio at the phone number provided above. I understand I will receive 2 messages a month, data rates may apply, reply STOP to opt out</span>
+                ><span>I agree to receive marketing messages from Wacky Sports at the phone number provided above. I understand that I can reply STOP to opt out.</span>
               </label>
             </div>
         </div>
