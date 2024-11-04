@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ $data['subject'] }}</title>
+    <title>{{'FORM'}}</title>
   <style>
       .twili_wrapper {
           height: 100vh;

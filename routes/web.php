@@ -9,6 +9,7 @@ use App\Http\Controllers\Account;
 
 
 Route::get('/', [Main::class, 'index']);
+Route::get('/terms-of-use', [Main::class, 'tos']);
 Route::get('/admin-login', [Main::class, 'login']);
 Route::get('/dashboard', [Main::class, 'dashboard']);
 Route::Post('/post-login', [Account::class, 'post_login']);

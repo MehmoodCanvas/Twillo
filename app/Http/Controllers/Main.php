@@ -15,6 +15,10 @@ class Main extends Controller
         return view('index');
    }
 
+   public function tos(){
+    return view('tos');
+}
+
    public function login(){
     if(Auth::check()){
         return redirect('/dashboard');

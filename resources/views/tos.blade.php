@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ $data['subject'] }}</title>
+    <title>TOU</title>
     <style>
         .legal_top_wrapper {
             padding: 150px 0px 100px 0px;
