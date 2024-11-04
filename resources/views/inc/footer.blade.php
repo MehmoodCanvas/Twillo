@@ -4,7 +4,7 @@
                     <ul>
                         <li><a href="#!">Privacy Policy</a></li>
                         <li><a href="#!">|</a></li>
-                        <li><a href="#!">Terms Of Use</a></li>
+                        <li><a href="{{url('terms-of-use')}}">Terms Of Use</a></li>
                     </ul>
                 </div>
             </div>
