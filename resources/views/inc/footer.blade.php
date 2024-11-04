@@ -1,5 +1,13 @@
         <footer class="footer-wrapper">
-        
+            <div class="footer_copyright_flex justify-content-center">
+                <div class="copyright_nav">
+                    <ul>
+                        <li><a href="#!">Privacy Policy</a></li>
+                        <li><a href="#!">|</a></li>
+                        <li><a href="#!">Terms Of Use</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
 
 
