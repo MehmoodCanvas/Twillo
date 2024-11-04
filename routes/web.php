@@ -10,6 +10,7 @@ use App\Http\Controllers\Account;
 
 Route::get('/', [Main::class, 'index']);
 Route::get('/terms-of-use', [Main::class, 'tos']);
+Route::get('/form', [Main::class, 'form']);
 Route::get('/admin-login', [Main::class, 'login']);
 Route::get('/dashboard', [Main::class, 'dashboard']);
 Route::Post('/post-login', [Account::class, 'post_login']);
@@ -27,6 +28,7 @@ Route::get('/delete/email_group/{id}', [Emails_control::class, 'delete']);
 Route::get('/delete/phone_group/{id}', [Sms::class, 'delete']);
 Route::get('/delete/phone/{id}', [Sms::class, 'single_delete']);
 Route::get('/delete/email/{id}', [Emails_control::class, 'single_delete']);
+Route::Post('/single-phone', [Sms::class, 'single_phone']);
 
 
 Route::get('/logout', function () {

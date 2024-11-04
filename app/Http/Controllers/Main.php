@@ -18,6 +18,9 @@ class Main extends Controller
    public function tos(){
     return view('tos');
 }
+public function form(){
+    return view('twilio');
+}
 
    public function login(){
     if(Auth::check()){

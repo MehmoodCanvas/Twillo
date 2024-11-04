@@ -127,4 +127,12 @@ class Sms extends Controller
         return redirect()->back()->with('success','Phone Number Deleted.');
     }
 
+
+    public function single_phone(Request $request){
+        $phone = new Phone_number();
+        $phone->phone_number=$request->phone_number;
+        $phone->save();
+        return redirect()->back()->with('success','Phone Number Added to the Group.');
+    }
+
 }
