@@ -1416,8 +1416,8 @@ body::-webkit-scrollbar-thumb {
 .copyright_nav ul li a{
     font-size: 18px;
     font-family: var(--Montserrat-Medium);
-    color: var(--white);
-    text-transform: capitalize; 
+    color: #000000;
+    text-transform: capitalize;
 } 
 .new_modal .modal-dialog.modal-dialog-centered {
     max-width: 1000px;
@@ -1453,3 +1453,6 @@ body::-webkit-scrollbar-thumb {
     color: var(--black);
 }
 
+footer.footer-wrapper {
+    padding: 20px 0px;
+}
