@@ -18,6 +18,10 @@ class Main extends Controller
    public function tos(){
     return view('tos');
 }
+
+public function pp(){
+    return view('pp');
+}
 public function form(){
     return view('twilio');
 }

@@ -10,6 +10,8 @@ use App\Http\Controllers\Account;
 
 Route::get('/', [Main::class, 'index']);
 Route::get('/terms-of-use', [Main::class, 'tos']);
+Route::get('/privacy-policy', [Main::class, 'pp']);
+
 Route::get('/form', [Main::class, 'form']);
 Route::get('/admin-login', [Main::class, 'login']);
 Route::get('/dashboard', [Main::class, 'dashboard']);
