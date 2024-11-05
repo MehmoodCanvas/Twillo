@@ -13,7 +13,7 @@
                         <p>Discover the wildest and most entertaining sports from around the globe, where fun knows no bounds and every challenge is a blast!</p>
                     </div>
                     <div class="index_banner_btn">
-                        <a href="#!" class="common_dark_btn">Register Now</a>
+                        <a href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="common_dark_btn">Register Now</a>
                     </div>
                 </div>
             </div>
@@ -33,9 +33,9 @@
                     <p class="desc">At Wacky Sport, we specialize in offering a range of managed sports courses that bring together the thrill of unconventional games with expert training. Our courses are crafted to engage participants of all levels, blending fun and fitness in a dynamic environment. Whether you're exploring new sports or honing your skills, our courses are designed to challenge, entertain, and inspire.</p>
                     <p class="desc">Wacky Sport is dedicated to making sports accessible and enjoyable for everyone. Our managed sports courses are tailored to suit various interests and skill levels, ensuring that every participant finds something exciting. From unique, wacky games to more traditional sports, we provide a supportive and energetic environment where learning and laughter go hand in hand.</p>
                 </div>
-                <div class="index_first_wrap_btn">
+                <!-- <div class="index_first_wrap_btn">
                     <a href="#!" class="common_dark_btn">Load More</a>
-                </div>
+                </div> -->
                 <div class="index_first_wrap_feature">
                     <div class="index_feature_box_text">
                         <h6>64+</h6>
@@ -189,7 +189,7 @@
             <h6 class="heading">Academy coaches are experienced sports Experts</h6>
             <p class="desc2">Motivators, and Psychologists. They are here to help you find your focus and change the way you think about tennis.
             </p>
-            <a href="#!" class="common_light_btn">Meet The Team</a>
+            <!-- <a href="#!" class="common_light_btn">Meet The Team</a> -->
         </div>
         <div class="index_fourth_wrap_video">
             <video id="fourth_wrap_video" src="{{asset('assets/front/images/index_fourth_wrap_video.mp4')}}" loop muted autoplay></video>
@@ -206,15 +206,18 @@
                         <img src="{{asset('assets/front/images/index_sec_wrap_img1.jpg')}}" class="img-fluid" alt="">
                     </div>
                     <div class="fifth_wrap_slide_text">
-                        <h6 class="main_heading">Grow your skill</h6>
-                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio iusto culpa accusantium repellat totam aliquam sit, aliquid neque rem est aut distinctio veniam corporis rerum, quas nam, veritatis ullam architecto laudantium placeat illum.</p>
+                        <h6 class="main_heading mb-4">Grow your skill</h6>
+                        <!-- <p class="desc">Register with Us</p> -->
+                        <div class="fifth_wrap_slide_btn">
+                            <a href="#" class="common_dark_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">REGISTER WITH US</a>
+                        </div>
                     </div>
                     <div class="fifth_wrap_slide_r_img">
                         <img src="{{asset('assets/front/images/index_sec_wrap_img3.png')}}" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide fifth_wrap_slide">
+            <!-- <div class="swiper-slide fifth_wrap_slide">
                 <div class="fifth_wrap_slide_main">
                     <div class="fifth_wrap_slide_l_img">
                         <img src="{{asset('assets/front/images/index_sec_wrap_img2.jpg')}}" class="img-fluid" alt="">
@@ -241,14 +244,71 @@
                         <img src="{{asset('assets/front/images/fifth_wrap_slide_img2.png')}}" class="img-fluid" alt="">
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
-        <div class="index_fifth_slider_btn">
+        <!-- <div class="index_fifth_slider_btn">
             <button class="s_prev common_dark_btn">Prev</button>
             <div class="swiper-pagination"></div>
             <button class="s_next common_dark_btn">Next</button>
-        </div>
+        </div> -->
     </div>
 </section>
+
+
+<!-- Modal -->
+<div class="modal twilio_modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="btn_xclose" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+      <div class="modal-body">
+        <div class="twili_wrap_box">
+            <div class="twili_wrap_box_logo">
+                <img src="{{asset('assets/front/images/logo.png')}}" class="img-fluid">
+            </div>
+            <div class="twili_wrap_box_text">
+                <h6></h6>
+                <p>A brief description of the campaign.</p>
+            </div>
+            @if(session()->has('success'))
+            <div class="alert alert-success" role="alert">
+                {{ Session::get('success')}}
+                </div>
+                @endif
+            <form action="{{url("single-phone")}}" method="post">
+                @csrf
+            <div class="twili_wrap_box_input">
+                <input type="number" placeholder="Your phone number" name="phone_number">
+                <button type="submit">Join Now</button>
+            </div>
+            </form>
+            <div class="checkbox-wrapper-46">
+                <input type="checkbox" id="cbx-46" class="inp-cbx" required />
+                <label for="cbx-46" class="cbx"
+                ><span>
+                    <svg viewBox="0 0 12 10" height="10px" width="12px">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span
+                ><span>I agree to receive marketing messages from Wacky Sports at the phone number provided above. I understand that I can reply STOP to opt out.</span>
+                </label>
+            </div>
+        </div>
+        <div class="twili_wrap_bottom_btn">
+          <ul>
+              <li>
+                  <a href="">Privacy Policy</a>
+              </li>
+              <li>
+                  <a href="">|</a>
+              </li>
+              <li>
+                  <a href="{{url('terms-of-use')}}">Terms of Service</a>
+              </li>
+          </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 @include('inc.footer')

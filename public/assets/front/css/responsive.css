@@ -10,6 +10,9 @@
     .signin_form_main_wrap {
         width: calc(100% - 1010px);
     }
+    .index_banner_text h6 {
+        font-size: 55px;
+    }
 }
 @media only screen and (max-width: 1399px){
     .dashboard_side_bar .nav-link {
@@ -114,8 +117,45 @@
     .signup_wrap1 input {
         font-size: 14px;
     }
-    .cus_dmenu li button 
+    .cus_dmenu li button {
         font-size: 13px
+    }
+    .index_banner_text h6 {
+        font-size: 45px;
+    }
+    .index_banner_text p {
+        font-size: 18px;
+    }
+    .main_heading {
+        font-size: 45px;
+    }
+    .desc {
+        font-size: 16px;
+    }
+    .index_feature_box_text h6 {
+        font-size: 25px;
+        width: 120px;
+        height: 65px;
+    }
+    .index_feature_box_text p {
+        font-size: 16px;
+    }
+    .index_fourth_wrap_video {
+        top: 55%;
+        width: 65%;
+        height: 450px;
+    }
+    .heading {
+        font-size: 45px;
+    }
+    .desc2 {
+        font-size: 16px;
+    }
+    .index_fifth_wrapper {
+        padding: 250px 0px 0px 0px;
+    }
+    .copyright_nav ul li a {
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 1199px){

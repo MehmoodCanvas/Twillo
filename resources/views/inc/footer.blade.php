@@ -2,8 +2,8 @@
             <div class="footer_copyright_flex justify-content-center">
                 <div class="copyright_nav">
                     <ul>
-                        <li><a href="#!">Privacy Policy</a></li>
-                        <li><a href="#!">|</a></li>
+                        <li><a href="{{url('privacy-policy')}}">Privacy Policy</a></li>
+                        <li>|</li>
                         <li><a href="{{url('terms-of-use')}}">Terms Of Use</a></li>
                     </ul>
                 </div>
