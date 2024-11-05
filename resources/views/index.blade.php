@@ -296,10 +296,10 @@
         <div class="twili_wrap_bottom_btn">
           <ul>
               <li>
-                  <a href="">Privacy Policy</a>
+                  <a href="{{url('privacy-policy')}}">Privacy Policy</a>
               </li>
               <li>
-                  <a href="">|</a>
+                  |
               </li>
               <li>
                   <a href="{{url('terms-of-use')}}">Terms of Service</a>

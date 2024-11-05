@@ -1593,11 +1593,14 @@ footer.footer-wrapper {
     justify-content: center;
     gap: 20px;
 }
+.twili_wrap_bottom_btn ul li{
+    opacity: 0.9;
+}
 .twili_wrap_bottom_btn ul li a {
     font-size: 16px;
     font-family: var(--Montserrat-Medium);
     color: var(--black);
-    opacity: 0.7;
+    opacity: 0.9;
 }
 .twili_wrap_bottom_btn ul li a:hover{
     color: var(--bs-link-color);
