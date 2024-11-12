@@ -373,6 +373,7 @@
                                             <label for="email_group_id">Select Group <span>*</span></label>
                                             <select name="email_group_id" id="email_group_id" class="minimal" required>
                                                 <option value="">Select Group</option>
+                                                <option value="single">Single Email</option>
                                                 @foreach ($emailsgroups as $emails)
                                                 <option value="{{$emails->email_group_id}}">{{$emails->email_group_name}}</option>
                                                 @endforeach
@@ -387,8 +388,8 @@
                                     </div> 
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <div class="d_content_main_form_inputs">
-                                            <label for="">Title <span>*</span></label>
-                                            <input type="text" placeholder="Enter Enter Message"  name="title" required></input>
+                                            <label for="">Single Email <span>*</span></label>
+                                            <input type="text" placeholder="Enter Single Email If Single is Choosen"  name="single_email"></input>
                                         </div>
                                     </div> 
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">

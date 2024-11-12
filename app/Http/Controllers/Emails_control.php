@@ -31,25 +31,43 @@ class Emails_control extends Controller
     }
 
     public function sending_email(Request $request){
-
-      $group = DB::table('emails')->where('emails_group_id',$request->email_group_id)->get();
-      foreach($group as $groups){
-        $data = [
-            'subject' => $request->subject,
-            'title' => $request->title,
-            'body' => $request->body,
-            'link1' => [
-                'url' => route('approved').'?email='.$groups->emails_email,
-                'text' => 'Interested',
-            ],
-            'link2' => [
-                'url' => route('noapproval').'?email='.$groups->emails_email,
-                'text' => 'Not Interested',
-            ],
-        ];
-
-       Mail::to($groups->emails_email)->send(new Bulk_email($data));
-      }
+        if($request->email_group_id =='Single'){
+            $data = [
+                'subject' => $request->subject,
+                'title' => 'Null',
+                'body' => $request->body,
+                'link1' => [
+                    'url' => route('approved').'?email='.$request->single_email,
+                    'text' => 'Interested',
+                ],
+                'link2' => [
+                    'url' => route('noapproval').'?email='.$request->single_email,
+                    'text' => 'Not Interested',
+                ],
+            ];
+    
+           Mail::to($request->single_email)->send(new Bulk_email($data));
+        }else{
+            $group = DB::table('emails')->where('emails_group_id',$request->email_group_id)->get();
+            foreach($group as $groups){
+              $data = [
+                  'subject' => $request->subject,
+                  'title' => $request->title,
+                  'body' => $request->body,
+                  'link1' => [
+                      'url' => route('approved').'?email='.$groups->emails_email,
+                      'text' => 'Interested',
+                  ],
+                  'link2' => [
+                      'url' => route('noapproval').'?email='.$groups->emails_email,
+                      'text' => 'Not Interested',
+                  ],
+              ];
+      
+             Mail::to($groups->emails_email)->send(new Bulk_email($data));
+            }
+        }
+    
       return redirect()->back()->with('success','Emails Sent!');
 
 
