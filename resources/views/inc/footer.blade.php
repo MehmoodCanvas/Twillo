@@ -15,7 +15,7 @@
         <script src="{{asset('assets/front/js/jquery-3.6.3.min.js')}}"></script>
         <script src="{{asset('assets/front/js/swiper-bundle.min.js')}}"></script>
         <script src="{{asset("assets/front/js/custom.js")}}"></script>
-
+        
     <script>
         $(document).ready(function() {
             $('#pass_ico').on('click', function() {

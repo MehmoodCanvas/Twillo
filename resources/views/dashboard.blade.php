@@ -393,8 +393,8 @@
                                     </div> 
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <div class="d_content_main_form_inputs">
-                                            <x-bladewind::textarea rows="20" name="body" label="Body"    required="true" toolbar="true"></x-bladewind::textarea>
-                                            {{-- <textarea placeholder="Enter Enter Message"  name="body" required></textarea> --}}
+                                           
+                                            <textarea id="basic-conf" placeholder="Enter Enter Message"  name="body"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -714,7 +714,309 @@
 <script src="{{asset('assets/front/js/swiper-bundle.min.js')}}"></script>
 <script src="{{asset("assets/front/js/custom.js")}}"></script>
 <script src="{{ asset('vendor/bladewind/js/helpers.js') }}"></script>
-<script src="//unpkg.com/alpinejs" defer></script>
+<script src="https://cdn.tiny.cloud/1/ovcqyonlgkt5atfff0di1ynaf5u0jvztzi999yrbluq973wo/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+       selector: '#basic-conf',
+       plugins: [
+          'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+          'searchreplace', 'wordcount', 'visualblocks', 'code', 'fullscreen', 'insertdatetime', 'media',
+          'table', 'emoticons', 'help'
+       ],
+       toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+          'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+          'forecolor backcolor emoticons | help',
+       init_instance_callback: function (editor) {
+          editor.setContent(`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+   <head>
+      <!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="format-detection" content="date=no" />
+      <meta name="format-detection" content="address=no" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="x-apple-disable-message-reformatting" />
+      <!--[if !mso]><!-->
+      <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet" />
+      <!--<![endif]-->
+      <title>Wacky Sports Offer</title>
+      <!--[if gte mso 9]>
+      <style type="text/css" media="all">
+         sup { font-size: 100% !important; }
+      </style>
+      <![endif]-->
+      <style type="text/css" media="screen">
+         /* Linked Styles */
+         body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none }
+         a { color:#66c7ff; text-decoration:none }
+         p { padding:0 !important; margin:0 !important } 
+         img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+         .mcnPreviewText { display: none !important; }
+         /* Mobile styles */
+         @media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+         .mobile-shell { width: 100% !important; min-width: 100% !important; }
+         .bg { background-size: 100% auto !important; -webkit-background-size: 100% auto !important; }
+         .text-header,
+         .m-center { text-align: center !important; }
+         .center { margin: 0 auto !important; }
+         .container { padding: 20px 10px !important }
+         .td { width: 100% !important; min-width: 100% !important; }
+         .m-br-15 { height: 15px !important; }
+         .p30-15 { padding: 30px 15px !important; }
+         .p40 { padding: 20px !important; }
+         .m-td,
+         .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
+         .m-block { display: block !important; }
+         .fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important; }
+         .column,
+         .column-top,
+         .column-empty,
+         .column-empty2,
+         .column-dir-top { float: left !important; width: 100% !important; display: block !important; }
+         .column-empty { padding-bottom: 10px !important; }
+         .column-empty2 { padding-bottom: 20px !important; }
+         .content-spacing { width: 15px !important; }
+         }
+      </style>
+   </head>
+   <body class="body" style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none;">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4">
+         <tr>
+            <td align="center" valign="top">
+               <table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
+                  <tr>
+                     <td class="td container" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; margin:0; font-weight:normal; padding:55px 0px;">
+                        <!-- Header -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                              <td style="padding-bottom: 20px;">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                       <td class="p30-15" style="padding: 25px 30px 25px 30px;" bgcolor="#232323">
+                                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                             <tr>
+                                                <th class="column-top" width="145" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;">
+                                                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                         <td class="img m-center" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://thewackyreport.com/special-promotions-firsttime.html" target="_blank"><img src="http://thewackyreport.com/images/Wackysportsbanner1-min.png" width="240" height="52" border="0" alt="Wacky Sports Special Offer " /></td>
+                                                         </a>
+                                                      </tr>
+                                                   </table>
+                                                </th>
+                                                <th class="column-empty" width="1" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                                <th class="column" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                      </tr>
+                                                   </table>
+                                                </th>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                        <!-- END Header -->
+                        <!-- Section 1 -->							
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#313941">
+                           <tr>
+                              <td valign="top" class="m-td" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                       <td class="img" height="30" bgcolor="#ffffff" style="font-size:0pt; line-height:0pt; text-align:left;">&nbsp;</td>
+                                    </tr>
+                                 </table>
+                              </td>
+                              <td align="center" valign="top" width="650" class="mobile-shell">
+                                 <table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
+                                    <tr>
+                                       <td class="td" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                             <tr>
+                                                <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="#" target="_blank"><img src="https://thewackyreport.com/images/bg-background.jpg" width="650" height="300" editable="true" border="0" alt="" /></a></td>
+                                             </tr>
+                                             <tr>
+                                                <td class="h1-1-white centered p-25-15" style="padding: 28px; color:#000000; font-family:'Barlow Condensed', Arial,sans-serif; font-size:36px; line-height:52px; text-align:center;" bgcolor="#61E1B6">
+                                                   <multiline>
+                                                      NEXT TOP SAT NOV 9, 2024! <br>
+                                                      16-4 Since 2020
+                                                   </multiline>
+                                                </td>
+                                             </tr>
+                                             <tr>
+                                                <td class="p-25-15" style="padding: 30px 30px 50px 30px;">
+                                                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                         <td class="text-4-white centered" style="padding-bottom: 30px; color:#ffffff; font-family:'Quicksand', Arial,sans-serif; font-size:24px; line-height:34px; text-align:center;">
+                                                            <multiline>
+                                                               <b>50% OFF Lowest Pricing For First time clients</b><br>YOUR Lowest Price Specials!
+                                                            </multiline>
+                                                         </td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td align="center">
+                                                            <!-- Button -->
+                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                               <tr>
+                                                                  <td class="text-btn-red" bgcolor="#1E90ff" style="color:#d85d5c; font-family:'Quicksand', Arial,sans-serif; font-size:18px; line-height:16px; text-align:center; padding:13px 27px; border-radius:3px;">
+                                                                     <multiline>
+                                                                        <a href="https://thewackyreport.com/special-promotions-firsttime.html" target="_blank" class="link" style="color:#d85d5c; text-decoration:none;"><span class="link" style="color:#ffffff; text-decoration:none;"><strong>VIEW THE SPECIALS</strong></span></a>
+                                                                     </multiline>
+                                                                  </td>
+                                                               </tr>
+                                                            </table>
+                                                            <!-- END Button -->
+                                                         </td>
+                                                      </tr>
+                                                   </table>
+                                                </td>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </td>
+                              <td valign="top" class="m-td" style="font-size:0pt; line-height:0pt; text-align:left;">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                       <td class="img" height="30" bgcolor="#ffffff" style="font-size:0pt; line-height:0pt; text-align:left;">&nbsp;</td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                        <!-- END Section 1 -->
+                        <!-- Article / Title + Copy + Button PART 1 Let Wacky Help -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                              <td style="padding-bottom: 20px;">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                                    <tr>
+                                       <td class="p30-15" style="padding: 50px 30px;">
+                                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                             <tr>
+                                                <td class="h3 pb20" style="color:#114490; font-family:'Noto Sans', Arial,sans-serif; font-size:24px; line-height:32px; text-align:left; padding-bottom:20px;">Let Wacky Help Your Bankroll Grow</td>
+                                             </tr>
+                                             <tr>
+                                                <td class="text pb20" style="color:#000000; font-family:'Noto Sans', Arial,sans-serif; font-size:16px; line-height:26px; text-align:left; padding-bottom:20px;">Wacky Sports Just Earned a #1 Top Spot in College Football with two Monitors!!! Since 2020 The NFL|NCAAF Combo Package has amassed 200+ Units of Profits. Trust the Process! This Is the Lowest Price Offered and will expire soon.</td>
+                                             </tr>
+                                             <!-- Button -->
+                                             <tr>
+                                                <td align="left">
+                                                   <table border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                         <td class="text-button" style="background:#114490; color:#ffffff; font-family:'Noto Sans', Arial,sans-serif; font-size:16px; line-height:18px; padding:14px 22px; text-align:center; border-radius:6px;"><a href="https://docs.google.com/spreadsheets/d/1IcfDnHO73GCRj3xE6p3d3FjHkEbyuzBIzPzMNLRqcxg/edit?usp=sharing" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none;"><span class="link-white" style="color:#ffffff; text-decoration:none;">VIEW 2023 NCAAF RESULTS</span></a></td>
+                                                      </tr>
+                                                   </table>
+                                                </td>
+                                             </tr>
+                                             <!-- END Button -->
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                        <!-- END Article / Title + Copy + Button -->
+                        <!-- END Two Columns / Images TWO OF THEM END-->
+                        <!-- Article Image On The Right Who Is Wacky-->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                              <td style="padding-bottom: 20px;">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                                    <tr>
+                                       <td class="p40" style="padding:40px;">
+                                          <table width="100%" border="0" cellspacing="0" cellpadding="0" dir="rtl" style="direction: rtl;">
+                                             <tr>
+                                                <th class="column-dir-top" dir="ltr" width="225" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr; vertical-align:top;">
+                                                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                         <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left;"><img src="https://thewackyreport.com/images/Tom.Czarnecki-min.jpg" width="179" height="179" border="0" alt="Wacky Tom Czarnecki" /></td>
+                                                      </tr>
+                                                   </table>
+                                                </th>
+                                                <th class="column-empty" dir="ltr" width="30" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; vertical-align:top;"></th>
+                                                <th class="column-dir-top" dir="ltr" style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal; direction:ltr; vertical-align:top;">
+                                                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                      <tr>
+                                                         <td class="h4 pb20" style="color:#114490; font-family:'Noto Sans', Arial,sans-serif; font-size:24px; line-height:28px; text-align:left; padding-bottom:20px;">Who Is Wacky</td>
+                                                      </tr>
+                                                      <tr>
+                                                         <td class="text pb20" style="color:#000000; font-family:'Noto Sans', Arial,sans-serif; font-size:16px; line-height:28px; text-align:left; padding-bottom:20px;">A True Pro with Realistic Expectations. Wacky Earned 17x TOP Awards and Multi Top 5 Finishes. There are no Top Plays of the Month or Upsets of the Century here. </td>
+                                                      </tr>
+                                                      <!-- Button -->
+                                                      <tr>
+                                                         <td align="left">
+                                                            <table border="0" cellspacing="0" cellpadding="0">
+                                                               <tr>
+                                                                  <td class="text-button" style="background:#114490; color:#ffffff; font-family:'Noto Sans', Arial,sans-serif; font-size:16px; line-height:18px; padding:14px 22px; text-align:center; border-radius:6px;"><a href="https://thewackyreport.com/special-promotions-firsttime.html" target="_blank" class="link-white" style="color:#ffffff; text-decoration:none;"><span class="link-white" style="color:#ffffff; text-decoration:none;">READ MORE</span></a></td>
+                                                               </tr>
+                                                            </table>
+                                                         </td>
+                                                      </tr>
+                                                      <!-- END Button -->
+                                                   </table>
+                                                </th>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                        <!-- Article Image On The Right -->
+                        <!-- Footer -->
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                              <td class="p30-15" style="padding: 50px 30px;" bgcolor="#ffffff">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                       <td align="center" style="padding-bottom: 30px;">
+                                          <table border="0" cellspacing="0" cellpadding="0">
+                                             <tr>
+                                                <td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://x.com/TheWackyReport" target="_blank"><img src="https://thewackyreport.com/images/t8_ico_twitter.jpg" width="45" height="45" border="0" alt="" /></a></td>
+                                             </tr>
+                                          </table>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-footer1 pb10" style="color:#999999; font-family:'Noto Sans', Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;">Wacky Sports - "The Most Knowledge Has The Edge"</td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-footer2 pb30" style="color:#999999; font-family:'Noto Sans', Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;"></td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-footer3" style="color:#000000; font-family:'Noto Sans', Arial,sans-serif; font-size:12px; line-height:18px; text-align:center;"><a href="#" target="_blank" class="link3-u" style="color:#000000; text-decoration:underline;"><span class="link3-u" style="color:#000000; text-decoration:underline;">Unsubscribe</span></a> from this mailing list.</td>
+                                    </tr>
+                                 </table>
+                              </td>
+                           </tr>
+                        </table>
+                        <!-- END Footer -->
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>`);
+       }
+    });
+ </script>
 
 <script type="text/javascript">
     $('.confirmation').on('click', function () {
