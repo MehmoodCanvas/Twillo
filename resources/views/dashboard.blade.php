@@ -373,7 +373,7 @@
                                             <label for="email_group_id">Select Group <span>*</span></label>
                                             <select name="email_group_id" id="email_group_id" class="minimal" required>
                                                 <option value="">Select Group</option>
-                                                <option value="single">Single Email</option>
+                                                <option value="Single">Single Email</option>
                                                 @foreach ($emailsgroups as $emails)
                                                 <option value="{{$emails->email_group_id}}">{{$emails->email_group_name}}</option>
                                                 @endforeach
@@ -729,7 +729,7 @@
           'forecolor backcolor emoticons | help',
        init_instance_callback: function (editor) {
           editor.setContent(`<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
    <head>
       <!--[if gte mso 9]>
       <xml>
@@ -795,7 +795,7 @@
             <td align="center" valign="top">
                <table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
                   <tr>
-                     <td class="td container" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; margin:0; font-weight:normal; padding:55px 0px;">
+                     <td class="td container" style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; margin:0; font-weight:normal; padding-top:55px; padding-bottom: 10px;">
                         <!-- Header -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                            <tr>
@@ -979,34 +979,7 @@
                            </tr>
                         </table>
                         <!-- Article Image On The Right -->
-                        <!-- Footer -->
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                           <tr>
-                              <td class="p30-15" style="padding: 50px 30px;" bgcolor="#ffffff">
-                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                       <td align="center" style="padding-bottom: 30px;">
-                                          <table border="0" cellspacing="0" cellpadding="0">
-                                             <tr>
-                                                <td class="img" width="55" style="font-size:0pt; line-height:0pt; text-align:left;"><a href="https://x.com/TheWackyReport" target="_blank"><img src="https://thewackyreport.com/images/t8_ico_twitter.jpg" width="45" height="45" border="0" alt="" /></a></td>
-                                             </tr>
-                                          </table>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td class="text-footer1 pb10" style="color:#999999; font-family:'Noto Sans', Arial,sans-serif; font-size:16px; line-height:20px; text-align:center; padding-bottom:10px;">Wacky Sports - "The Most Knowledge Has The Edge"</td>
-                                    </tr>
-                                    <tr>
-                                       <td class="text-footer2 pb30" style="color:#999999; font-family:'Noto Sans', Arial,sans-serif; font-size:12px; line-height:26px; text-align:center; padding-bottom:30px;"></td>
-                                    </tr>
-                                    <tr>
-                                       <td class="text-footer3" style="color:#000000; font-family:'Noto Sans', Arial,sans-serif; font-size:12px; line-height:18px; text-align:center;"><a href="#" target="_blank" class="link3-u" style="color:#000000; text-decoration:underline;"><span class="link3-u" style="color:#000000; text-decoration:underline;">Unsubscribe</span></a> from this mailing list.</td>
-                                    </tr>
-                                 </table>
-                              </td>
-                           </tr>
-                        </table>
-                        <!-- END Footer -->
+
                      </td>
                   </tr>
                </table>
