@@ -366,8 +366,8 @@
                         </div>
                         <div class="d_content_main_form_wrap">
                              <form action="{{url('shoot-email')}}" method="post">
+                                @csrf
                                 <div class="row">
-                                    @csrf
                                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                         <div class="d_content_main_form_inputs">
                                             <label for="email_group_id">Select Group <span>*</span></label>

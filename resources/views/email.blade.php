@@ -31,11 +31,6 @@
             border-radius:6px;
             text-decoration: none
         }
-        .box_tbn_f{
-            display: flex;
-            align-items: center;
-            gap: 20px
-        }
     </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif;">
@@ -71,10 +66,10 @@
                                     </a> from this mailing list.</td>
                                 </tr>
                                 <tr>
-                                    <td class="new_text box_tbn_f">
+                                    <td class="new_text box_tbn_f" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 20px; ">
                                         <p style="text-align: center" class="btn_1"><a href="{{$data['link1']['url']}}">{{$data['link1']['text']}}</a> </p>
                                         <p style="text-align: center" class="btn_2"><a href="{{$data['link2']['url']}}" >{{$data['link2']['text']}}</a></p>
-                                    </td> 
+                                    </td>  
                                 </tr>
                         </table>
                     </td>
